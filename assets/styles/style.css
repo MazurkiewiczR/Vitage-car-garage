@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 112.5%;
+}
+
+img {
+    display: block;
+}
+
+:root {
+    --PRIMARY-COLOR: #FDD2D2;
+    --SECONDDARY-COLOR: #FDECD2;
+    --FONT-PRIMARY-COLOR: #141414;
+    --FONT-SECONDARY-COLOR: #858585;
+    --FONT-HEADER-COLOR: #ff24bd
+}
+
+body {
+    background-color: var(--PRIMARY-COLOR);
+}
+
+header {
+    background-color: var(--SECONDDARY-COLOR);
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-objects {
+    position: absolute;
+    left: 20%;
+    bottom: 45%;
+}
+
+.hero-title {
+    margin-bottom: 2rem;
+}
+
+.hero-img {
+    padding-top: 3rem;
+}
+
+
+main {
+    height: 150dvh;
+}
