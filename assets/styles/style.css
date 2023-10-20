@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-html {
-    font-size: 112.5%;
 }
 
 img {
@@ -27,7 +26,49 @@ body {
 header {
     background-color: var(--SECONDDARY-COLOR);
     position: relative;
+    top: 0;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    color: var(--FONT-PRIMARY-COLOR);
+}
+
+.logo {
+    margin-left: 40px;
+    font-size: 32px;
+    font-family: 'Leckerli One', cursive;
+    cursor: pointer;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    row-gap: 4px;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+}
+
+.menu-item {
+    margin-right: 16px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--FONT-PRIMARY-COLOR);
+    padding: 8px;
+    margin-inline: 8px;
+    cursor: pointer;
+}
+
 
 .hero-container {
     display: flex;
@@ -36,15 +77,14 @@ header {
     width: 100%;
     height: 70dvh;
     position: absolute;
-
     bottom: 0;
+    background-color: var(--SECONDDARY-COLOR);
 }
 
 .hero-objects {
     align-self: flex-end;
     margin-bottom: 30%;
 }
-
 
 .hero-img-wrapper {
     background-color: red;
@@ -69,12 +109,12 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 99;
+    z-index: 1;
     position: relative;
     bottom: -5px;
     transform: rotateY(0.5turn);
 }
 
 .wave {
-    background-image: url('../svg/layered-waves-haikei(1).svg');
+    background-image: url('../images/wave.svg')
 }
