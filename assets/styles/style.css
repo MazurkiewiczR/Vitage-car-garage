@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;200;400&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,15 +10,20 @@ img {
   display: block;
 }
 
+body {
+  background-color: #333;
+}
+
 .container {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding-inline: 32px;
 }
 
-nav {
-  background-color: #333;
+.hamburger-wrapper {
+  background-color: #222;
+  width: 100%;
+  height: 90px;
 }
 
 .hamburger {
@@ -24,14 +31,22 @@ nav {
   flex-direction: column;
   cursor: pointer;
   padding: 5px;
+  z-index: 99;
+  position: absolute;
+  top: 25px;
+  right: 20px;
 }
 
-.bar {
-  width: 30px;
+.hamburger .bar {
+  width: 25px;
   height: 2px;
-  background-color: red;
+  background-color: white;
   margin: 4px 0;
   transition: 0.4s;
+}
+
+.hamburger.active {
+  position: fixed;
 }
 
 .hamburger.active .bar:nth-child(1) {
@@ -51,4 +66,91 @@ nav {
   .hamburger {
     display: none;
   }
+}
+
+.nav {
+  font-family: "Roboto", sans-serif;
+  background-color: #222;
+  font-weight: 200;
+  white-space: nowrap;
+}
+
+.nav > * {
+  color: white;
+}
+
+.nav a {
+  text-transform: uppercase;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100dvh;
+  display: block;
+  padding-top: 10px;
+  transition: 0.5s;
+}
+
+.mobile-nav > * {
+  display: block;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.mobile-nav a:nth-child(2) {
+  color: rgb(245, 86, 46);
+}
+
+.social-links {
+  padding-top: 40px;
+}
+
+.mobile-nav.active {
+  left: 0;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 9%;
+    padding-right: 5%;
+  }
+
+  .desktop-nav > * {
+    margin-inline: 2.5%;
+    text-decoration: none;
+  }
+
+  .hamburger-wrapper {
+    display: none;
+  }
+}
+
+.login {
+  text-transform: none;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar-pic {
+  width: 30px;
+  height: auto;
+  border-radius: 50%;
+  margin-inline: auto;
 }
