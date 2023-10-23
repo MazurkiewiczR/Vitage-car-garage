@@ -175,8 +175,9 @@ body {
     padding-left: 9%;
     padding-right: 5%;
     position: fixed;
-    top: 0;
+    top: -2px;
     width: 100%;
+    z-index: 99;
   }
 
   .desktop-nav > * {
@@ -215,6 +216,7 @@ body {
   width: 150px;
   height: auto;
   margin-inline: auto;
+  filter: brightness(0) invert(1);
 }
 
 .hero-title {
@@ -265,5 +267,5 @@ body {
 }
 
 footer {
-  min-height: 500px;
+  min-height: 1500px;
 }
