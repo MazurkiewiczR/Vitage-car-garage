@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=PT+Sans+Narrow&family=Roboto:wght@100;400&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,6 +8,11 @@
 
 img {
   display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-font-color);
 }
 
 body {
@@ -95,9 +100,11 @@ body {
   left: 100%;
   width: 100%;
   min-height: 100dvh;
+  height: 500px;
   display: block;
   padding-top: 10px;
   transition: 0.5s;
+  overflow-y: scroll;
 }
 
 .mobile-nav > * {
@@ -128,11 +135,6 @@ body {
   flex-flow: row;
   align-items: center;
   gap: 15px;
-}
-
-.login a {
-  text-decoration: none;
-  color: var(--primary-font-color);
 }
 
 .avatar-pic {
@@ -172,6 +174,9 @@ body {
     justify-content: center;
     padding-left: 9%;
     padding-right: 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
   .desktop-nav > * {
@@ -182,4 +187,83 @@ body {
   .hamburger-wrapper {
     display: none;
   }
+}
+
+/* HERO SECTION */
+
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../images/car-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 115dvh;
+  color: var(--primary-font-color);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  background-attachment: scroll;
+  text-transform: uppercase;
+}
+
+.hero-objects {
+  padding-top: 40px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.hero-title {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.hero-details {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+}
+
+.desktop-social-links {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding-top: 90px;
+    background-attachment: fixed;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .hero-title {
+    font-size: 60px;
+  }
+
+  .hero-details {
+    font-size: 20px;
+  }
+
+  .desktop-social-links {
+    display: flex;
+    position: absolute;
+    bottom: -80px;
+    gap: 28px;
+  }
+
+  .fa {
+    font-size: 42px;
+  }
+}
+
+footer {
+  min-height: 500px;
 }
