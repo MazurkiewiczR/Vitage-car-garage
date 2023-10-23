@@ -14,14 +14,27 @@ body {
   background-color: #333;
 }
 
+/* VARIABLES */
+
+:root {
+  --primary-font-color: #fafafa;
+  --secondary-font-color: #101010;
+  --primary-bg-color: #ffffff;
+  --secondary-bg-color: #222;
+}
+
+/* UTILITY CLASSES */
+
 .container {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
 }
 
+/* NAV */
+
 .hamburger-wrapper {
-  background-color: #222;
+  background-color: var(--secondary-bg-color);
   width: 100%;
   height: 90px;
 }
@@ -40,7 +53,7 @@ body {
 .hamburger .bar {
   width: 25px;
   height: 2px;
-  background-color: white;
+  background-color: var(--primary-bg-color);
   margin: 4px 0;
   transition: 0.4s;
 }
@@ -61,25 +74,18 @@ body {
   transform: rotate(45deg) translate(-5px, -9px);
 }
 
-/* Media Query for Desktop */
-@media screen and (min-width: 768px) {
-  .hamburger {
-    display: none;
-  }
-}
-
 .nav {
   font-family: "Roboto", sans-serif;
-  background-color: #222;
+  background-color: var(--secondary-bg-color);
   font-weight: 200;
   white-space: nowrap;
 }
 
 .nav > * {
-  color: white;
+  color: var(--primary-font-color);
 }
 
-.nav a {
+.nav p {
   text-transform: uppercase;
 }
 
@@ -104,12 +110,8 @@ body {
   text-decoration: none;
 }
 
-.mobile-nav a:nth-child(2) {
+.mobile-nav p:nth-child(2) {
   color: rgb(245, 86, 46);
-}
-
-.social-links {
-  padding-top: 40px;
 }
 
 .mobile-nav.active {
@@ -120,7 +122,49 @@ body {
   display: none;
 }
 
+.login {
+  text-transform: none;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.login a {
+  text-decoration: none;
+  color: var(--primary-font-color);
+}
+
+.avatar-pic {
+  width: 30px;
+  height: auto;
+  border-radius: 50%;
+  margin-inline: auto;
+}
+
+.social-links {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-items: center;
+  align-items: center;
+  padding-top: 40px;
+  gap: 10px;
+}
+
+.fa {
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
 @media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
   .desktop-nav {
     display: flex;
     height: 70px;
@@ -138,19 +182,4 @@ body {
   .hamburger-wrapper {
     display: none;
   }
-}
-
-.login {
-  text-transform: none;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  gap: 15px;
-}
-
-.avatar-pic {
-  width: 30px;
-  height: auto;
-  border-radius: 50%;
-  margin-inline: auto;
 }
