@@ -43,7 +43,7 @@ body {
   text-transform: uppercase;
   position: relative;
   padding: 20px;
-  margin-block: 20px;
+  margin-block: 40px;
 }
 
 .section-title::after {
