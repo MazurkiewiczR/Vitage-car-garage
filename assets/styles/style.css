@@ -262,6 +262,7 @@ body {
 @media screen and (min-width: 768px) {
   .hero-section {
     padding-top: 90px;
+    padding-bottom: 90px;
     background-attachment: fixed;
     position: relative;
   }
@@ -281,7 +282,7 @@ body {
   .desktop-social-links {
     display: flex;
     position: absolute;
-    bottom: 0px;
+    bottom: 80px;
     gap: 28px;
     width: 100%;
     justify-content: center;
@@ -294,19 +295,25 @@ body {
 
 /* SERVICES SECTION */
 
+.parallax-wrapper {
+  color: var(--primary-font-color);
+  text-align: center;
+  position: relative;
+  top: -280px;
+  width: 100%;
+  padding-bottom: 50px;
+  padding-top: 40px;
+}
+
 .parallax {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/hand_painted_black_watercolour_background_0407.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--primary-font-color);
-  text-align: center;
-  position: relative;
-  top: -270px;
-  width: 100%;
-  padding-bottom: 50px;
-  padding-top: 40px;
+  height: 100%;
+  position: absolute;
+  inset: 0;
 }
 
 .services {
@@ -352,21 +359,29 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .parallax {
 
+  .parallax-wrapper {
+    position: relative;
+    overflow: hidden;
     top: 0;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     height: 650px;
-    padding-block: 0 60px;
-    position: relative;
+    padding-block: 50px 30px;
+
+  }
+
+  .parallax {
+    background-position: top;
+    background-size: auto 4000px;
   }
 
   .services {
     width: 100%;
     height: 100%;
+    top: 10%;
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -386,28 +401,25 @@ body {
   }
 
 
-  .image-container {
+  /*   .image-container {
     position: relative;
     height: 70vh;
     overflow: hidden;
   }
+ */
+  /*   .image-parallax {
 
-  .image-parallax {
-    background-image: url('https://images.alphacoders.com/488/488145.jpg');
     background-position: top;
     background-size: auto 3000px;
-
-  }
-
-  .image-text {
-    position: absolute;
-    top: 50%;
-  }
-
-
-
-
+ */
 }
+
+.image-text {
+  position: absolute;
+  top: 50%;
+}
+
+
 
 footer {
   min-height: 1500px;
