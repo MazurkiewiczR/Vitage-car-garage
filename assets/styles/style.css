@@ -57,6 +57,10 @@ body {
   margin-left: -19px;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 /* NAV */
 
 .hamburger-wrapper {
@@ -259,6 +263,7 @@ body {
   .hero-section {
     padding-top: 90px;
     background-attachment: fixed;
+    position: relative;
   }
 
   .logo {
@@ -276,7 +281,7 @@ body {
   .desktop-social-links {
     display: flex;
     position: absolute;
-    bottom: -80px;
+    bottom: 0px;
     gap: 28px;
     width: 100%;
     justify-content: center;
@@ -348,6 +353,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .parallax {
+
     top: 0;
     display: flex;
     flex-flow: column;
@@ -355,12 +361,21 @@ body {
     justify-content: center;
     height: 650px;
     padding-block: 0 60px;
+    position: relative;
+  }
+
+  .services {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
   }
 
   .services-list {
     display: flex;
     width: 80%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin-inline: auto;
     column-gap: 10px;
@@ -369,6 +384,29 @@ body {
   .service-item {
     width: 220px;
   }
+
+
+  .image-container {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+  }
+
+  .image-parallax {
+    background-image: url('https://images.alphacoders.com/488/488145.jpg');
+    background-position: top;
+    background-size: auto 3000px;
+
+  }
+
+  .image-text {
+    position: absolute;
+    top: 50%;
+  }
+
+
+
+
 }
 
 footer {
