@@ -298,7 +298,7 @@ body {
 
 /* SERVICES SECTION */
 
-.parallax-wrapper {
+/* .parallax-wrapper {
   color: var(--primary-font-color);
   position: relative;
   top: -280px;
@@ -316,7 +316,7 @@ body {
   height: 100%;
   position: absolute;
   inset: 0;
-}
+} */
 
 .services {
   width: 100%;
@@ -361,7 +361,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .parallax-wrapper {
+  /*   .parallax-wrapper {
     position: relative;
     overflow: hidden;
     top: 0;
@@ -376,7 +376,7 @@ body {
   .parallax {
     background-position: top;
     background-size: auto 4000px;
-  }
+  } */
 
   .services {
     width: 100%;
@@ -399,11 +399,6 @@ body {
   .service-item {
     width: 220px;
   }
-}
-
-.image-text {
-  position: absolute;
-  top: 50%;
 }
 
 footer {

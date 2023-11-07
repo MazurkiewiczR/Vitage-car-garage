@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //
 
-const parallaxScroll = (parallaxClass, scrollSpeed) => {
+/* const parallaxScroll = (parallaxClass, scrollSpeed) => {
   const imageParallax = document.querySelector(`.${parallaxClass}`);
 
   window.addEventListener("scroll", function () {
@@ -35,4 +35,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   parallaxScroll("parallax", 0.1);
-});
+}); */
