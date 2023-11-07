@@ -61,6 +61,10 @@ body {
   overflow-y: hidden;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* NAV */
 
 .hamburger-wrapper {
@@ -106,7 +110,7 @@ body {
 
 .nav {
   background-color: var(--secondary-bg-color);
-  font-weight: 200;
+  font-weight: 300;
   white-space: nowrap;
   z-index: 98;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
@@ -226,7 +230,6 @@ body {
   background-size: cover;
   min-height: calc(105dvh + 90px);
   color: var(--primary-font-color);
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -297,7 +300,6 @@ body {
 
 .parallax-wrapper {
   color: var(--primary-font-color);
-  text-align: center;
   position: relative;
   top: -280px;
   width: 100%;
@@ -359,7 +361,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-
   .parallax-wrapper {
     position: relative;
     overflow: hidden;
@@ -370,7 +371,6 @@ body {
     justify-content: center;
     height: 650px;
     padding-block: 50px 30px;
-
   }
 
   .parallax {
@@ -399,27 +399,12 @@ body {
   .service-item {
     width: 220px;
   }
-
-
-  /*   .image-container {
-    position: relative;
-    height: 70vh;
-    overflow: hidden;
-  }
- */
-  /*   .image-parallax {
-
-    background-position: top;
-    background-size: auto 3000px;
- */
 }
 
 .image-text {
   position: absolute;
   top: 50%;
 }
-
-
 
 footer {
   min-height: 1500px;
