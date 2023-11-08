@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //
 
-/* const parallaxScroll = (parallaxClass, scrollSpeed) => {
+const parallaxScroll = (parallaxClass, scrollSpeed) => {
   const imageParallax = document.querySelector(`.${parallaxClass}`);
 
   window.addEventListener("scroll", function () {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     imageParallax.style.height =
       Number(containerHeight.slice(0, -2)) - translateY + "px";
     if (imageParallax.style.height > "5000px") {
-      imageParallax.style.height = "4000px";
+      imageParallax.style.height = "700px";
     }
   });
 };
@@ -34,5 +34,5 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  parallaxScroll("parallax", 0.1);
-}); */
+  parallaxScroll("parallax-bg", -0.2);
+});
