@@ -300,30 +300,6 @@ body {
 
 /* SERVICES SECTION */
 
-/* .parallax-wrapper {
-  color: var(--primary-font-color);
-  position: relative;
-  top: -280px;
-  width: 100%;
-  padding-bottom: 50px;
-  padding-top: 40px;
-}
-
-.parallax {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/hand_painted_black_watercolour_background_0407.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-} */
-
-/* .services {
-  width: 100%;
-} */
-
 .parallax {
   position: relative;
   z-index: 0;
@@ -390,7 +366,6 @@ body {
 }
 
 .parallax-bg {
-  z-index: 1;
   min-height: 120%;
   width: 100%;
   object-fit: cover;
@@ -408,35 +383,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  /*   .parallax-wrapper {
-    position: relative;
-    overflow: hidden;
-    top: 0;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    height: 650px;
-    padding-block: 50px 30px;
-  }
-
-  .parallax {
-    background-position: top;
-    background-size: auto 4000px;
-  } */
-
-  /*   .services {
-    width: 100%;
-    height: 100%;
-    top: 10%;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-  } */
-
   .parallax {
     top: 0;
-    min-height: 700px;
+    min-height: 300px;
   }
 
   .services-header {
@@ -461,12 +410,129 @@ body {
   .service-item {
     width: 220px;
   }
+
+  .parallax-bg {
+    min-height: 300px;
+    height: 600px;
+  }
+}
+
+.parallax-section {
+  height: 100%;
+  overflow: hidden;
+}
+
+.parallax-wrapper {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.7);
+  transform-style: inherit;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(0.25px) scale(0.75) translateX(-94%) translateY(-100%)
+    rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240, 230, 220, 0.7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+img:last-of-type {
+  transform: translateZ(0.4px) scale(0.6) translateX(-104%) translateY(-40%)
+    rotate(-5deg);
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240, 230, 220, 0.7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n + 1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slide,
+.slide:before {
+  background: 50% 50% / cover;
+}
+
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+
+#title {
+  background-image: url("https://picsum.photos/640/480");
+  z-index: 2;
+}
+
+#title h1 {
+  transform: translateZ(0.25px) scale(0.75);
+  transform-origin: 50% 100%;
+}
+
+#slide1:before {
+  background-image: url("https://picsum.photos/960/520");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+  background-image: url("https://picsum.photos/960/400");
+  z-index: 2;
+}
+
+#slide3:before {
+  background-image: url("https://picsum.photos/980/600");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide4 {
+  background: #222;
 }
 
 .gallery-section {
   background-color: var(--primary-bg-color);
   height: 600px;
   z-index: 30;
+  overflow: hidden;
 }
 
 footer {
