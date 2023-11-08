@@ -318,12 +318,50 @@ body {
   inset: 0;
 } */
 
-.services {
+/* .services {
+  width: 100%;
+} */
+
+.parallax {
+  position: relative;
+  z-index: 0;
+  min-height: 1200px;
+  display: grid;
+  top: -300px;
+  grid-template-areas: "stack";
+}
+
+.parallax > * {
+  grid-area: stack;
+}
+
+.parallax > img {
+  width: 100%;
+}
+
+.services-header {
+  z-index: 20;
+  color: var(--primary-font-color);
+  position: absolute;
+  width: 100%;
+  margin-inline: auto;
+  top: 150px;
+}
+
+.services-list {
+  display: flex;
+  flex-flow: column;
+  row-gap: 30px;
+  position: absolute;
+  top: 300px;
+  margin-inline: auto;
   width: 100%;
 }
 
 .service-item {
   margin: 15px;
+  z-index: 10;
+  color: var(--primary-font-color);
 }
 
 .service-img {
@@ -340,6 +378,7 @@ body {
   text-transform: uppercase;
   font-size: 20px;
   margin: 20px;
+  z-index: 11;
 }
 
 .service-details {
@@ -348,16 +387,22 @@ body {
   margin-inline: auto;
 }
 
+.parallax-bg {
+  z-index: 1;
+  min-height: 120%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .service-item:nth-of-type(1) .service-details:nth-of-type(1) {
   max-width: 140px;
 }
 
 .service-item:nth-of-type(2) .service-details:nth-of-type(1) {
-  max-width: 220px;
+  max-width: 230px;
 }
-
 .service-item:nth-of-type(3) .service-details:nth-of-type(1) {
-  max-width: 180px;
+  max-width: 220px;
 }
 
 @media screen and (min-width: 768px) {
@@ -378,26 +423,45 @@ body {
     background-size: auto 4000px;
   } */
 
-  .services {
+  /*   .services {
     width: 100%;
     height: 100%;
     top: 10%;
     background-size: cover;
     background-position: center;
     position: absolute;
+  } */
+
+  .parallax {
+    top: 0;
+    min-height: 700px;
+  }
+
+  .services-header {
+    z-index: 20;
+    color: var(--primary-font-color);
+    position: absolute;
+    width: 100%;
+    margin-inline: auto;
+    top: 60px;
   }
 
   .services-list {
     display: flex;
-    width: 80%;
+    flex-flow: row;
+    width: 100%;
     justify-content: center;
-    align-items: center;
-    margin-inline: auto;
     column-gap: 10px;
+    top: 210px;
   }
 
   .service-item {
     width: 220px;
+  }
+
+  .parallax-bg {
+    min-height: 600px;
+    height: 700px;
   }
 }
 
