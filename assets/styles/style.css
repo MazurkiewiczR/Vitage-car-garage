@@ -491,22 +491,23 @@ main,
 /* CONTACT SECTION */
 
 .contact-block {
-  height: 1050px;
-}
-
-.contact-container {
-  height: 1000px;
+  height: 1020px;
 }
 
 .retro-car-wrapper {
   width: 280px;
   margin-inline: auto;
-  margin-top: 40px;
+  margin: 40px auto 20px;
 }
 
 .retro-car-img {
   display: block;
   width: 100%;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 20px;
 }
 
 .information-box {
@@ -516,6 +517,37 @@ main,
 
 .information-box .section-title {
   margin-top: 0;
+}
+
+.address-info > p {
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.address-info h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-block: 20px 10px;
+}
+
+.opening-hours {
+  line-height: 1.7;
+}
+
+.contact-box p {
+  margin-block: 3px;
+}
+.contact-box input {
+  width: 100%;
+  height: ;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
 }
 
 /* FOOTER */
