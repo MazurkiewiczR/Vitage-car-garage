@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vintage Car Specialist</title>
-    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <style></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -68,7 +68,7 @@
     </header>
 
     <main>
-      <section class="hero-section text-center">
+      <section class="hero-section text-center block longer hero-bg">
         <div class="hero-objects">
           <img src="./assets/images/logo.webp" alt="logo" class="logo" />
           <h1 class="hero-title">JOHN & JANE</h1>
@@ -89,9 +89,13 @@
         </div>
       </section>
 
-      <section class="text-center">
-        <div class="parallax">
-          <div><h2 class="section-title services-header">Services</h2></div>
+      <div class="main-container">
+        <section class="block service-block text-center">
+          <img
+            src="./assets/images/hand_painted_black_watercolour_background_0407.jpg"
+            class="img-parallax services-bg"
+          />
+          <h2 class="section-title services-header">Services</h2>
           <div class="services-list">
             <div class="service-item">
               <img
@@ -100,7 +104,7 @@
                 class="service-img"
               />
               <h4 class="service-title">Repairs</h4>
-              <p class="service-details">
+              <p class="main-txt">
                 General Repairs, Specialist Repairs & Vintage Parts
               </p>
             </div>
@@ -111,7 +115,7 @@
                 class="service-img"
               />
               <h4 class="service-title">Upholstery</h4>
-              <p class="service-details">
+              <p class="main-txt">
                 A Range of Fabrics, Including Vintage Leathers, & Wide Variety
                 of Colors
               </p>
@@ -123,53 +127,110 @@
                 class="service-img"
               />
               <h4 class="service-title">Paintwork</h4>
-              <p class="service-details">
+              <p class="main-txt">
                 Spray paint, Custom Stencilling & Variety of Custom Made Artwork
               </p>
             </div>
           </div>
-          <img
-            class="parallax-bg"
-            src="./assets/images/hand_painted_black_watercolour_background_0407.jpg"
-            alt="parallax background"
-          />
-        </div>
-      </section>
+        </section>
 
-      <section class="parallax-section">
-        <div class="parallax-wrapper">
-          <div id="slide1" class="slide">
-            <div class="title">
-              <h2>Slide 1</h2>
-              <p>
-                Lorem ipsum dolor sit amet, in velit iudico mandamus sit,
-                persius dolorum in per, postulant mnesarchum cu nam. Malis movet
-                ornatus id vim, feugait detracto est ea, eam eruditi conceptam
-                in. Ne sit explicari interesset. Labores perpetua cum at. Id
-                viris docendi denique vim.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="gallery-section text-center">
-        <div><h2 class="section-title">Our Work</h2></div>
-        <div>
-          <p class="section-details">
+        <section class="spacer gallery-section text-center">
+          <h2 class="section-title">Our work</h2>
+          <p class="main-txt">
             A collection of cars we've renovated with passion
           </p>
+        </section>
+
+        <section class="block about-block">
+          <img
+            src="https://unsplash.it/1920/1920/?gravity=center"
+            class="img-parallax about-bg"
+          />
+          <div class="content-container about-container text-center">
+            <h2 class="section-title nowrap about-header">about us</h2>
+            <p class="main-txt">
+              I'm a paragraph. Click here to add your own text and edit me. It’s
+              easy. Just click “Edit Text” or double click me to add your own
+              content and make changes to the font. Feel free to drag and drop
+              me anywhere you like on your page. I’m a great place for you to
+              tell a story and let your users know a little more about you. ​
+              <br />
+              <br />
+              This is a great space to write long text about your company and
+              your services. You can use this space to go into a little more
+              detail about your company. Talk about your team and what services
+              you provide.
+            </p>
+          </div>
+        </section>
+
+        <div class="block spacer">
+          <img
+            src="https://unsplash.it/1920/1920/?image=1080"
+            class="img-parallax"
+          />
         </div>
-        <div class="gallery">
-          <div class="gallery-grid">
-            <div class="gallery-object">
-              <img src="#" alt="..." />
+
+        <div class="block contact-block">
+          <img
+            src="https://unsplash.it/1920/1920/?random"
+            class="img-parallax big"
+          />
+
+          <div class="contact-container">
+            <div class="retro-car-wrapper">
+              <img
+                src="./assets/images/retro-car-PNG.png"
+                alt="..."
+                class="retro-car-img"
+              />
+            </div>
+            <div class="content-container information-box">
+              <h2 class="section-title nowrap text-center">Find us</h2>
+              <p>
+                500 Terry Francine Street <br />
+                San Francisco, CA 94158
+              </p>
+              <p>info@mysite.com</p>
+              <p>Tel: 123-456-7890</p>
+              <h3>Opening Hours:</h3>
+              <p>Mon - Fri: 7am - 10pm</p>
+              <p>Saturday: 8am - 10pm</p>
+              <p>Sunday: 8am - 11pm</p>
+              <div class="contact-box">
+                <div>
+                  <p>First Name</p>
+                  <input type="text" />
+                </div>
+                <div>
+                  <p>Last Name</p>
+                  <input type="text" />
+                </div>
+                <div>
+                  <p>Email *</p>
+                  <input type="text" />
+                </div>
+                <div>
+                  <p>Subject</p>
+                  <input type="text" />
+                </div>
+                <div>
+                  <p>Message</p>
+                  <input type="text" />
+                </div>
+                <button>Submit</button>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+
+        <section class="footer">
+          <h2>footer</h2>
+          <p>footer footer footer footer</p>
+        </section>
+      </div>
     </main>
-    <footer></footer>
-    <script src="/assets/scripts/script.js"></script>
+
+    <script src="./assets/scripts/script.js"></script>
   </body>
 </html>
