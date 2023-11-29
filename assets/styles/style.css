@@ -40,10 +40,6 @@ main,
   z-index: -1;
 }
 
-.big {
-  height: 140%;
-}
-
 .main-container {
   position: relative;
   top: -300px;
@@ -62,6 +58,11 @@ main,
   --secondary-font-color: #101010;
   --primary-bg-color: #ffffff;
   --secondary-bg-color: #202020;
+}
+
+a {
+  color: var(--primary-font-color);
+  text-decoration: none;
 }
 
 /* UTILITY CLASSES */
@@ -112,6 +113,16 @@ main,
   font-weight: 300;
   font-size: 18px;
   margin-inline: auto;
+}
+
+.social-links {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-items: center;
+  align-items: center;
+  padding-top: 40px;
+  gap: 10px;
 }
 
 /* NAV */
@@ -224,16 +235,6 @@ main,
   margin-inline: auto;
 }
 
-.social-links {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
-  justify-items: center;
-  align-items: center;
-  padding-top: 40px;
-  gap: 10px;
-}
-
 .fa {
   font-size: 30px;
   width: 30px;
@@ -339,6 +340,7 @@ main,
 .services-bg {
   height: 100%;
   width: 400%;
+  filter: brightness(40%);
 }
 
 .service-block {
@@ -484,7 +486,11 @@ main,
 
 @media screen and (min-width: 768px) {
   .spacer {
-    height: 570px;
+    height: 600px;
+  }
+
+  .spacer-bg {
+    height: 200%;
   }
 }
 
@@ -518,6 +524,10 @@ main,
 
 .information-box .section-title {
   margin-top: 0;
+}
+
+.address-info:first-child {
+  margin-top: 10px;
 }
 
 .address-info > p {
@@ -555,6 +565,7 @@ main,
   height: 40px;
   width: 100%;
   margin-block: 10px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -575,15 +586,45 @@ main,
 /* FOOTER */
 
 .footer {
-  height: 300px;
+  height: 100px;
   text-align: center;
-  color: white;
-  background-color: black;
-  font-size: 2vw;
-  margin-top: 0;
-  bottom: 0;
+  color: var(--primary-font-color);
+  background-color: var(--secondary-bg-color);
+}
+
+.desktop-socials {
+  display: none;
 }
 
 .footer p {
-  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 150px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .desktop-socials {
+    display: block;
+  }
+
+  .social-links {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 0;
+  }
+
+  .footer p {
+    top: 0;
+    transform: translateY(0);
+    margin-top: 20px;
+  }
 }
