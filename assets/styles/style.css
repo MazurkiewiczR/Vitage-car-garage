@@ -468,10 +468,10 @@ main,
 
   .content-container {
     height: 520px;
+    width: 740px;
   }
 
   .about-container {
-    width: 740px;
     padding: 50px 100px 80px;
   }
 }
@@ -491,7 +491,7 @@ main,
 /* CONTACT SECTION */
 
 .contact-block {
-  height: 1020px;
+  height: 1250px;
 }
 
 .retro-car-wrapper {
@@ -511,6 +511,7 @@ main,
 }
 
 .information-box {
+  height: fit-content;
   top: 0;
   transform: translate(0);
 }
@@ -534,19 +535,40 @@ main,
   line-height: 1.7;
 }
 
-.contact-box p {
-  margin-block: 3px;
-}
-.contact-box input {
+.input {
+  margin-block: 7px;
   width: 100%;
-  height: ;
+  height: 30px;
+  border: var(--secondary-font-color) 1px solid;
+}
+.msg-box {
+  margin-top: 5px;
+  height: 150px;
+  width: 100%;
+  border: var(--secondary-font-color) 1px solid;
+}
+.submit-btn {
+  outline: none;
+  background-color: var(--secondary-font-color);
+  color: var(--primary-font-color);
+  border: none;
+  height: 40px;
+  width: 100%;
+  margin-block: 10px;
 }
 
 @media screen and (min-width: 768px) {
   .contact-grid {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 10px;
+    gap: 50px;
+  }
+  .information-box {
+    padding: 60px;
+    height: 780px;
+  }
+  .contact-block {
+    height: 1100px;
   }
 }
 

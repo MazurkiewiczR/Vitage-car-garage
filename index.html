@@ -202,37 +202,45 @@
                 </div>
               </div>
               <div class="contact-box">
-                <div>
-                  <p>First Name</p>
-                  <input type="text" />
+                <form action="/action_page.php">
+                  <div>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" class="input"/>
+                  </div>
+                  <div>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" class="input"/>
+                  </div>
+                  <div>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" class="input" required/>
+                  </div>
+                  <div>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" class="input"/>
+                  </div>
+                  <div>
+                    <label for="message-box">Message</label>
+                    <textarea
+                      name="message"
+                      id="message-box"
+                      class="msg-box"
+                    ></textarea>
+                    <input type="submit" value="submit" class="submit-btn"></input>
+                    </div>
+                  </form>
                 </div>
-                <div>
-                  <p>Last Name</p>
-                  <input type="text" />
-                </div>
-                <div>
-                  <p>Email *</p>
-                  <input type="text" />
-                </div>
-                <div>
-                  <p>Subject</p>
-                  <input type="text" />
-                </div>
-                <div>
-                  <p>Message</p>
-                  <input type="text" />
-                </div>
-                <button class="submit-btn">Submit</button>
               </div>
             </div>
           </div>
-        </div>
+
 
         <section class="footer">
           <h2>footer</h2>
           <p>footer footer footer footer</p>
         </section>
       </div>
+      
     </main>
 
     <script src="./assets/scripts/script.js"></script>
