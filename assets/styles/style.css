@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=PT+Sans+Narrow&family=Roboto:wght@100;300;400&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 html,
@@ -58,7 +60,7 @@ main,
 
 :root {
   --primary-font-color: #fafafa;
-  --secondary-font-color: #101010;
+  --secondary-font-color: #050505;
   --primary-bg-color: #ffffff;
   --secondary-bg-color: #202020;
 }
@@ -76,7 +78,8 @@ a {
 
 @media screen and (min-width: 768px) {
   .pattern-bg {
-    height: 200%;
+    height: 150%;
+    width: 130%;
   }
 }
 
@@ -87,6 +90,7 @@ a {
   position: relative;
   padding: 20px;
   margin-block: 20px;
+  font-family: "Roboto", sans-serif;
 }
 
 .section-title::after {
@@ -126,6 +130,7 @@ a {
   font-weight: 300;
   font-size: 18px;
   margin-inline: auto;
+  font-family: "Lato", sans-serif
 }
 
 .social-links {
@@ -145,6 +150,7 @@ a {
   width: 100%;
   height: 90px;
   z-index: 10;
+
 }
 
 .hamburger {
@@ -185,6 +191,8 @@ a {
 .nav {
   background-color: var(--secondary-bg-color);
   font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
   white-space: nowrap;
   z-index: 10;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
@@ -275,7 +283,7 @@ a {
   }
 
   .desktop-nav > * {
-    margin-inline: 2.5%;
+    margin-inline: 2%;
     text-decoration: none;
   }
 
@@ -341,14 +349,14 @@ a {
   .desktop-social-links {
     display: flex;
     position: absolute;
-    bottom: 80px;
-    gap: 28px;
+    bottom: 20px;
+    gap: 20px;
     width: 100%;
     justify-content: center;
   }
 
   .fa {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
@@ -399,6 +407,7 @@ a {
   text-transform: uppercase;
   font-size: 20px;
   margin: 20px;
+  font-family: "Lato", sans-serif
 }
 
 .service-item:nth-of-type(1) .main-txt:nth-of-type(1) {
@@ -408,6 +417,7 @@ a {
 .service-item:nth-of-type(2) .main-txt:nth-of-type(1) {
   max-width: 230px;
 }
+
 .service-item:nth-of-type(3) .main-txt:nth-of-type(1) {
   max-width: 220px;
 }
@@ -418,8 +428,8 @@ a {
   }
 
   .services-bg {
-    height: 140%;
-    width: 100%;
+    height: 270%;
+    width: 180%;
   }
 
   .services-header {
@@ -455,9 +465,7 @@ a {
   height: 750px;
 }
 
-.about-bg {
-  height: 250%;
-}
+
 
 .about-block .main-txt {
   font-size: 19px;
@@ -477,9 +485,7 @@ a {
     height: 720px;
   }
 
-  .about-bg {
-    height: 300%;
-  }
+
 
   .about-header {
     margin-bottom: 30px;
@@ -507,8 +513,9 @@ a {
   }
 
   .spacer-bg {
-    height: 220%;
-    width: auto;
+    height: auto;
+    width: 100%;
+    min-width: 1200px;
   }
 }
 
@@ -532,6 +539,8 @@ a {
 .contact-grid {
   display: grid;
   gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 .information-box {
@@ -557,6 +566,8 @@ a {
   text-transform: uppercase;
   font-size: 20px;
   margin-block: 20px 10px;
+  font-weight: 300;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 
 .opening-hours {
@@ -569,12 +580,14 @@ a {
   height: 30px;
   border: var(--secondary-font-color) 1px solid;
 }
+
 .msg-box {
   margin-top: 5px;
   height: 150px;
   width: 100%;
   border: var(--secondary-font-color) 1px solid;
 }
+
 .submit-btn {
   outline: none;
   background-color: var(--secondary-font-color);
@@ -584,6 +597,7 @@ a {
   width: 100%;
   margin-block: 10px;
   cursor: pointer;
+  font: inherit;
 }
 
 @media screen and (min-width: 768px) {
@@ -592,10 +606,12 @@ a {
     grid-template-columns: auto auto;
     gap: 50px;
   }
+
   .information-box {
     padding: 60px;
     height: 780px;
   }
+
   .contact-block {
     height: 1100px;
   }
@@ -608,6 +624,8 @@ a {
   text-align: center;
   color: var(--primary-font-color);
   background-color: var(--secondary-bg-color);
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
 }
 
 .desktop-socials {

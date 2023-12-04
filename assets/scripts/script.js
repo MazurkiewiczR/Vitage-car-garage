@@ -40,7 +40,7 @@ function addDataAttribute() {
 
   if (window.innerWidth > 768) {
     blockElements.forEach((element) => {
-      element.setAttribute("data-speed", "1");
+      element.setAttribute("data-speed", "-0.75");
     });
   } else {
     blockElements.forEach((element) => {
