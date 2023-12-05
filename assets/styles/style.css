@@ -506,6 +506,7 @@ h3 {
 
 .hover-text .main-txt {
   padding: 20px 20px 30px;
+  font-size: 16px;
 }
 
 .grid-img-container:hover .hover-text {
