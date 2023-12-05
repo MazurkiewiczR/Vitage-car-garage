@@ -455,9 +455,84 @@ a {
 
 .gallery-section {
   height: fit-content;
-  min-height: 750px;
   background-color: white;
 }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  justify-items: center;
+  margin-inline: auto;
+  padding: 50px 5px;
+  overflow: hidden;
+}
+
+.gallery-grid img {
+  max-width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-img-container {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hover-text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-out;
+}
+
+.hover-text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+}
+
+.hover-text p {
+  align-self: center;
+  margin-inline: auto;
+}
+
+.grid-img-container:hover .hover-text {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+@media screen and (min-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 2fr);
+    align-items: stretch;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 3fr);
+    max-width: 1280px;
+    padding-bottom: 70px;
+  }
+}
+
+
+
+
+
+
+
 
 /* ABOUT SECTION */
 
