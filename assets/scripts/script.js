@@ -64,3 +64,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.toggle("no-scroll");
   });
 });
+
+// IMAGE LOADING
+
+const blurredSections = document.querySelectorAll(".blurred-img");
+
+blurredSections.forEach((section) => {
+  const img = section.querySelector("img");
+
+  function loaded() {
+    img.classList.add("loaded");
+  }
+
+  if (img.complete) {
+    loaded();
+  } else {
+    img.addEventListener("load", loaded);
+  }
+});

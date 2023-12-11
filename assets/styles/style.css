@@ -77,6 +77,23 @@ h3 {
 
 /* UTILITY CLASSES */
 
+.blurred-img {
+  background-size: cover;
+  background-position: center;
+
+}
+
+.blurred-img > img {
+  opacity: 0;
+}
+
+.blurred-img .loaded {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+  z-index: 0;
+}
+
+
 .pattern-bg {
   height: 100%;
 }
@@ -396,6 +413,7 @@ h3 {
 .service-item {
   margin: 15px;
   line-height: 1.3;
+  z-index: 1;
 }
 
 .service-img {
