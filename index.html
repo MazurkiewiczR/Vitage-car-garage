@@ -120,8 +120,8 @@
           <div class="gallery-grid">
 
             <div class="grid-img-container">
-              <img src="/assets/images/pexels-nordic-overdrive-1082655.jpg" alt="Sample photo">
-              <div class="hover-text">
+              <img src="assets/images/pexels-nordic-overdrive-1082655.jpg" class="grid-img" alt="Sample photo">
+              <div class="hover-text" onclick="openModal();currentSlide(1);hideMenu()">
                 <h3>Image Title</h3>
                 <p class="main-txt">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis reprehenderit ea eos. Esse, voluptatibus.
@@ -138,8 +138,8 @@
             </div>
 
             <div class="grid-img-container">
-              <img src="/assets/images/pexels-nordic-overdrive-1082655.jpg" alt="Sample photo">
-              <div class="hover-text">
+              <img src="assets/images/pexels-nordic-overdrive-1082655.jpg" class="grid-img" alt="Sample photo">
+              <div class="hover-text" onclick="openModal();currentSlide(2);hideMenu()">
                 <h3>Image Title</h3>
                 <p class="main-txt">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis reprehenderit ea eos. Esse, voluptatibus.
@@ -156,8 +156,8 @@
             </div>
 
             <div class="grid-img-container">
-              <img src="/assets/images/pexels-nordic-overdrive-1082655.jpg" alt="Sample photo">
-              <div class="hover-text">
+              <img src="assets/images/pexels-nordic-overdrive-1082655.jpg" class="grid-img" alt="Sample photo">
+              <div class="hover-text" onclick="openModal();currentSlide(3);hideMenu()">
                 <h3>Image Title</h3>
                 <p class="main-txt">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis reprehenderit ea eos. Esse, voluptatibus.
@@ -174,8 +174,8 @@
             </div>
 
             <div class="grid-img-container">
-              <img src="/assets/images/pexels-nordic-overdrive-1082655.jpg" alt="Sample photo">
-              <div class="hover-text">
+              <img src="assets/images/pexels-nordic-overdrive-1082655.jpg" class="grid-img" alt="Sample photo">
+              <div class="hover-text" onclick="openModal();currentSlide(4);hideMenu()">
                 <h3>Image Title</h3>
                 <p class="main-txt">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis reprehenderit ea eos. Esse, voluptatibus.
@@ -192,8 +192,8 @@
             </div>
 
             <div class="grid-img-container">
-              <img src="/assets/images/pexels-nordic-overdrive-1082655.jpg" alt="Sample photo">
-              <div class="hover-text">
+              <img src="assets/images/pexels-nordic-overdrive-1082655.jpg" class="grid-img" alt="Sample photo">
+              <div class="hover-text" onclick="openModal();currentSlide(5);hideMenu()">
                 <h3>Image Title</h3>
                 <p class="main-txt">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis reprehenderit ea eos. Esse, voluptatibus.
@@ -210,8 +210,8 @@
             </div>
 
             <div class="grid-img-container">
-              <img src="/assets/images/pexels-nordic-overdrive-1082655.jpg" alt="Sample photo">
-              <div class="hover-text">
+              <img src="assets/images/pexels-nordic-overdrive-1082655.jpg" class="grid-img" alt="Sample photo">
+              <div class="hover-text" onclick="openModal();currentSlide(6);hideMenu()">
                 <h3>Image Title</h3>
                 <p class="main-txt">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis reprehenderit ea eos. Esse, voluptatibus.
@@ -229,6 +229,78 @@
 
           </div>
         </div>
+
+         <!-- The Modal/Lightbox -->
+         <div id="myModal" class="modal">
+          <span class="close" onclick="closeModal();showMenu()">&times;</span>
+          <div class="modal-content">
+        
+            <div class="mySlides">   
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <img src="./assets/images/car-hero.jpg" class="modal-image">
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <h3>I'm an image title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae laudantium cupiditate provident voluptas nemo modi a ipsum! Non, cumque molestiae quis, aut ullam modi eaque animi nobis quas itaque ad!</p>
+              </div>
+              
+            </div>
+        
+            <div class="mySlides">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <img src="./assets/images/black-.jpg" class="modal-image">
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <h3>I'm an image title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae laudantium cupiditate provident voluptas nemo modi a ipsum! Non, cumque molestiae quis, aut ullam modi eaque animi nobis quas itaque ad!</p>
+              </div>
+            </div>
+        
+            <div class="mySlides">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <img src="./assets/images/pexels-nordic-overdrive-1082655.jpg" class="modal-image">
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <h3>I'm an image title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae laudantium cupiditate provident voluptas nemo modi a ipsum! Non, cumque molestiae quis, aut ullam modi eaque animi nobis quas itaque ad!</p>
+              </div>
+            </div>
+        
+            <div class="mySlides">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <img src="./assets/images/spacer-img.jpg" class="modal-image">
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <h3>I'm an image title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae laudantium cupiditate provident voluptas nemo modi a ipsum! Non, cumque molestiae quis, aut ullam modi eaque animi nobis quas itaque ad!</p>
+              </div>
+            </div>
+
+            <div class="mySlides">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <img src="./assets/images/black-.jpg" class="modal-image">
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <h3>I'm an image title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae laudantium cupiditate provident voluptas nemo modi a ipsum! Non, cumque molestiae quis, aut ullam modi eaque animi nobis quas itaque ad!</p>
+              </div>
+            </div>
+
+            <div class="mySlides">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <img src="./assets/images/spacer-img.jpg" class="modal-image">
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <h3>I'm an image title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae laudantium cupiditate provident voluptas nemo modi a ipsum! Non, cumque molestiae quis, aut ullam modi eaque animi nobis quas itaque ad!</p>
+              </div>
+            </div>
       </section>
 
       <section class="block about-block blurred-img" style="background-image: url(/assets/images/pattern-bg-small.jpg);">

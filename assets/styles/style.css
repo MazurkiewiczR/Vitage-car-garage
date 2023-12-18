@@ -491,7 +491,7 @@ h3 {
   overflow: hidden;
 }
 
-.gallery-grid img {
+.grid-img {
   max-width: 100%;
   height: 100%;
   transition: transform 0.3s ease-in-out;
@@ -535,9 +535,9 @@ h3 {
 .img-buttons {
   display: flex;
   flex-flow: row;
-  width: 75%;
+  width: 65%;
   margin-inline: auto;
-  padding-top: 20px;
+  padding-top: 1%;
   justify-content: space-between;
   align-items: center;
 }
@@ -545,7 +545,6 @@ h3 {
 .gallery-btn:hover {
   opacity: 0.5;
 }
-
 
 @media screen and (min-width: 480px) {
   .gallery-grid {
@@ -556,7 +555,6 @@ h3 {
 }
 
 @media screen and (min-width: 1024px) {
-
   .gallery-grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 3fr);
@@ -565,7 +563,129 @@ h3 {
   }
 }
 
+/* Hide menu */
 
+.hidden {
+  display: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  text-align: left;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: whitesmoke;
+}
+
+/* The Close Button */
+.close {
+  color: var(--secondary-font-color);
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+  height: 100%;
+  flex-flow: column;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  display: none;
+}
+
+/* Position the "next button" to the right */
+
+/* Caption text */
+.modal-image {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.caption-container > * {
+  width: 100%;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.caption-container h3 {
+  font-size: 18px;
+}
+
+/* img.demo {
+  opacity: 0.6;
+} */
+
+/* .active,
+.demo:hover {
+  opacity: 1;
+} */
+
+@media screen and (min-width: 1024px) {
+  .close {
+    top: 10px;
+    left: 95%;
+    font-size: 70px;
+    font-weight: 100;
+  }
+
+  .modal-content {
+    height: 100dvh;
+  }
+
+  .modal-image {
+    width: 60%;
+    max-height: 100%;
+
+    margin: 0;
+    align-self: center;
+  }
+
+  .caption-container {
+    display: inline-block;
+    margin-top: 170px;
+    margin-inline: 10px 4%;
+  }
+
+  .caption-container h3 {
+    font-size: 24px;
+  }
+
+  .caption-container p {
+    font-size: 18px;
+  }
+
+  .mySlides {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .prev,
+  .next {
+    display: inline-block;
+    cursor: pointer;
+    margin: 30px;
+    color: var(--secondary-font-color);
+    font-size: 40px;
+    align-self: center;
+  }
+}
 
 
 
