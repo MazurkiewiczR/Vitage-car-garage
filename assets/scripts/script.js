@@ -85,17 +85,37 @@ blurredSections.forEach((section) => {
 
 //GALLERY
 
-// Open the Modal
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
+// Open the Modal and hide menu
+
+function openModalAndHideMenu() {
+  const modal = document.getElementById("myModal");
+  const desktopMenu = document.querySelector(".desktop-nav");
+
+  modal.style.display = modal.style.display === "block" ? "none" : "block";
+
+  desktopMenu.classList.add("hidden");
 }
+const galleryImages = document.querySelectorAll(".open-modal");
+galleryImages.forEach(function (galleryImage) {
+  galleryImage.addEventListener("click", openModalAndHideMenu);
+});
 
 // Close the Modal
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
 
-var slideIndex = 1;
+function closeModalAndShowMenu() {
+  const modal = document.getElementById("myModal");
+  const desktopMenu = document.querySelector(".desktop-nav");
+
+  modal.style.display = modal.style.display === "none" ? "block" : "none";
+
+  desktopMenu.classList.remove("hidden");
+}
+const closeModal = document.querySelector(".close");
+closeModal.addEventListener("click", closeModalAndShowMenu);
+
+//slides
+
+let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -109,8 +129,8 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
 
   if (n > slides.length) {
     slideIndex = 1;
@@ -123,20 +143,4 @@ function showSlides(n) {
   }
 
   slides[slideIndex - 1].style.display = "flex";
-}
-
-function hideMenu() {
-  const desktopMenu = document.querySelector(".desktop-nav");
-
-  desktopMenu.classList.add("hidden");
-}
-
-function showMenu() {
-  const desktopMenu = document.querySelector(".desktop-nav");
-
-  if (!desktopMenu.classList.contains("hidden")) {
-    return;
-  } else {
-    desktopMenu.classList.remove("hidden");
-  }
 }
