@@ -507,7 +507,8 @@ h3 {
   text-align: center;
   overflow: hidden;
   cursor: pointer;
-  max-height: 335px;
+  max-height: 380px;
+  aspect-ratio: 4 / 3;
 }
 
 .hover-text {
