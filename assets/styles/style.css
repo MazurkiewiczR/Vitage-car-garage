@@ -476,6 +476,10 @@ h3 {
 
 /* GALLERY SECTION */
 
+.hidden {
+  display: none;
+}
+
 .gallery-section {
   height: fit-content;
   background-color: white;
@@ -494,6 +498,7 @@ h3 {
 .grid-img {
   max-width: 100%;
   height: 100%;
+  max-height: 100%;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -563,13 +568,6 @@ h3 {
   }
 }
 
-/* Hide menu */
-
-.hidden {
-  display: none;
-}
-
-/* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
@@ -582,7 +580,6 @@ h3 {
   background-color: whitesmoke;
 }
 
-/* The Close Button */
 .close {
   color: var(--secondary-font-color);
   position: absolute;
@@ -592,22 +589,17 @@ h3 {
   cursor: pointer;
 }
 
-/* Hide the slides by default */
 .mySlides {
   display: none;
   height: 100%;
   flex-flow: column;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
   display: none;
 }
 
-/* Position the "next button" to the right */
-
-/* Caption text */
 .modal-image {
   width: 100%;
   max-width: 100%;
@@ -627,15 +619,6 @@ h3 {
 .caption-container h3 {
   font-size: 18px;
 }
-
-/* img.demo {
-  opacity: 0.6;
-} */
-
-/* .active,
-.demo:hover {
-  opacity: 1;
-} */
 
 @media screen and (min-width: 1024px) {
   .close {
@@ -686,10 +669,6 @@ h3 {
     align-self: center;
   }
 }
-
-
-
-
 
 
 /* ABOUT SECTION */
