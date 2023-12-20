@@ -115,22 +115,26 @@ closeModal.addEventListener("click", closeModalAndShowMenu);
 
 //slides
 
-// Get the elements by class name
 const imageContainers = document.querySelectorAll(".hover-text");
 
-// Add click event listener to each image container
 imageContainers.forEach((container, index) => {
   container.addEventListener("click", () => {
     currentSlide(index + 1);
   });
 });
 
-// slides
 let slideIndex = 1;
 showSlides(slideIndex);
 
+document.querySelectorAll(".prev").forEach((prevButton) => {
+  prevButton.addEventListener("click", () => changeSlide(-1));
+});
+document.querySelectorAll(".next").forEach((nextButton) => {
+  nextButton.addEventListener("click", () => changeSlide(1));
+});
+
 // Next/previous controls
-function plusSlides(n) {
+function changeSlide(n) {
   showSlides((slideIndex += n));
 }
 
