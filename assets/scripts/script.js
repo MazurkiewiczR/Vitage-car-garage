@@ -85,7 +85,7 @@ blurredSections.forEach((section) => {
 
 //GALLERY
 
-// Open the Modal and hide menu
+// Open the Modal and hide Menu
 
 function openModalAndHideMenu() {
   const modal = document.getElementById("myModal");
@@ -115,6 +115,17 @@ closeModal.addEventListener("click", closeModalAndShowMenu);
 
 //slides
 
+// Get the elements by class name
+const imageContainers = document.querySelectorAll(".hover-text");
+
+// Add click event listener to each image container
+imageContainers.forEach((container, index) => {
+  container.addEventListener("click", () => {
+    currentSlide(index + 1);
+  });
+});
+
+// slides
 let slideIndex = 1;
 showSlides(slideIndex);
 
